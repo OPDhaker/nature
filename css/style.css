@@ -20,6 +20,11 @@ html {
   background: #FF0000;
 }
 
+hr.rounded {
+  border-top: 8px solid #000;
+  border-radius: 5px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -44,20 +49,29 @@ video {
 }
 
 .glass-bg {
-  width: 70%;
-  height: 400px;
+  width: 80%;
+  height: 500px;
   margin: 80px 0;
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  left: 2%;
+  right: 2%;
+  top: 2%;
+  bottom: 2%;
 }
 
-.glass-bg h1 {
-  padding-left: 2%;
-  padding-right: 2%;
+.content {
+  display: grid;
+  text-align: center;
+}
+
+.content h1 {
+  padding: 2%;
   color: #000;
   font-weight: 700;
   font-size: 30px;
@@ -66,9 +80,46 @@ video {
   text-align: center;
 }
 
-.glass-bg p {
+.content p {
+  margin-bottom: 5%;
   color: #000;
   font-size: 25px;
   text-shadow: 0 0 100px rgba(0, 0, 0, 0.4);
   font-weight: 500;
+  padding: 0 2%;
+}
+
+.content a {
+  margin: 0 10%;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #000;
+  border-radius: 5px;
+  text-shadow: 1px 1px 10px rgba(255,255,255,1);
+  padding: 10px 20px;
+  transition: 0.3s ease-in;
+}
+
+.glass-bg a:hover {
+  background: #000;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.so {
+  border-radius: .5rem;
+  padding: 0.1% 0.1%;
+  box-shadow: 0 0 1rem 1px rgba(0, 0, 0, 0.5);
+}
+.so p{
+  margin: 1% 0 1%;
+}
+.main {
+  display: grid;
+  grid-gap: 2%;
+  justify-content: center;
+  width: 100%;
+  grid-template-rows: 2fr 2fr;
+  grid-template-columns: 2fr 2fr;
 }
