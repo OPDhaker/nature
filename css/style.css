@@ -8,6 +8,7 @@ html {
   box-sizing: border-box;
   overflow: scroll;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -28,7 +29,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  scroll-behavior: smooth;
 }
 
 video {
