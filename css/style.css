@@ -90,10 +90,11 @@ video {
 .content p {
   margin-bottom: 5%;
   color: #000;
+  
   font-size: 25px;
   text-shadow: 0 0 100px rgba(0, 0, 0, 0.4);
   font-weight: 500;
-  padding: 0 2%;
+  padding: 0 1px;
 }
 
 .content a {
@@ -134,6 +135,20 @@ video {
   width: 100%;
   grid-template-rows: 2fr 2fr;
   grid-template-columns: 2fr 2fr;
+}
+
+#popup-container {
+  text-align: center;
+  width: max-content;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  background: #FF0000;
+  transition: all 0.2s;
+  background: linear-gradient(135deg, rgba(102,0,255,0.7) 0%, rgba(51,62,255,0.7) 51%, rgba(0,194,255,0.7) 100%);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 10px;
 }
 
 
