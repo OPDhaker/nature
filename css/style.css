@@ -138,14 +138,14 @@ video {
 }
 
 #popup-container {
+  background: rgba(255, 255, 255, 0.5);
+  color: #000;  
+  position: relative;
   text-align: center;
   width: max-content;
   padding: 0 10px;
   margin-bottom: 20px;
-  background: #FF0000;
   transition: all 0.2s;
-  background: linear-gradient(135deg, rgba(102,0,255,0.7) 0%, rgba(51,62,255,0.7) 51%, rgba(0,194,255,0.7) 100%);
-  color: #fff;
   font-size: 18px;
   font-weight: 700;
   border-radius: 10px;
