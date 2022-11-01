@@ -20,11 +20,6 @@ html {
   background: #FF0000;
 }
 
-hr.rounded {
-  border-top: 8px solid #000;
-  border-radius: 5px;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -138,19 +133,27 @@ video {
 }
 
 #popup-container {
-  background: rgba(255, 255, 255, 0.5);
-  color: #000;  
+  background: linear-gradient(
+    135deg, rgba(14,0,36,1) 5%,
+            rgba(97,9,121,1) 50%,
+            rgba(62,60,173,1) 80%,
+            rgba(0,212,255,1) 100%);
+  color: #fff;  
   position: relative;
   text-align: center;
+  height: 50px;
   width: max-content;
   padding: 0 10px;
   margin-bottom: 20px;
   transition: all 0.2s;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 500;
   border-radius: 10px;
 }
 
+.bro {
+  padding-top: 10px;
+}
 
 
 

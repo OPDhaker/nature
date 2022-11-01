@@ -5,9 +5,9 @@ const popup = (n, money) =>{
     </div>
     `   
 }
-let names = ["Om", "Dhairya", "Shreshth", "Rebels", "Pyxis", "Ishan", "Hamster", "Aditya", "Vinayak", "Satyam", "Naman", "Buddha", "Varad", "Sharma Ji"]
-const name = names[Math.floor(Math.random() * names.length)]
-console.log(`${name}`)
+// let names = ["Om", "Dhairya", "Shreshth", "Varad", "Mr. Beast"]
+// const name = names[Math.floor(Math.random() * names.length)]
+// console.log(`${name}`)
 const getMoney = () =>{
     return Math.floor(Math.random()*500)/10
 }
@@ -22,9 +22,9 @@ const addPopup = (money, n) =>{
 
 setInterval(()=>{
     const money = getMoney();
-    let names = ["Om", "Dhairya", "Shreshth"]
+    let names = ["Om", "Dhairya", "Shreshth", "Varad", "Mr. Beast"]
     const name = names[Math.floor(Math.random() * names.length)]
-    console.log(`${name}`)
+    // console.log(`${name}`)
     addPopup(money, name)
     setTimeout(()=>{
         removePopup()
