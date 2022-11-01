@@ -236,6 +236,10 @@ video {
   .content a {
     font-size: 20px;
   }
+
+  #popup-container {
+    padding: 0 2px;
+  }
 }
 
 @media screen and (max-width: 215px) {
@@ -312,6 +316,13 @@ video {
   }
 }
 
+@media screen and (max-width: 270px) {
+  #popup-container {
+    padding: 0 2px;
+    font-size: 15px;
+  }
+}
+
 @media screen and (max-width: 220px) {
   .so {
     padding: 0px 0px;
@@ -325,5 +336,26 @@ video {
     display: flex;
     flex-direction: column;
     grid-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 220px) {
+  #popup-container {
+    padding: 0 2px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 190px) {
+  #popup-container {
+    padding: 0 2px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 170px) {
+  #popup-container {
+    padding: 0 2px;
+    font-size: 10px;
   }
 }
