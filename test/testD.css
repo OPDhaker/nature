@@ -22,7 +22,7 @@
 .container form{
     background: #150050;
     border-radius: 5px;
-    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    box-shadow: 0 0 35px 0.05px rgba(251,37,118,1);
     padding: 20px;
     width: 600px;
     padding-top: 160px;
@@ -92,7 +92,7 @@
     background: linear-gradient(45deg, rgba(63,0,113,1) 0%, rgba(251,37,118,1) 100%);
     border-radius: 5px;
     backface-visibility: hidden;
-    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    box-shadow: 0 0 25px 1px rgb(255, 255, 255);
     padding:20px;
     transform:perspective(1000px) rotateY(0deg);
     transition:transform .4s ease-out;
@@ -140,7 +140,7 @@
     padding: 20px 0;
     text-align: right;
     backface-visibility: hidden;
-    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    box-shadow: 0 0 25px 1px rgb(255, 255, 255);
     transform:perspective(1000px) rotateY(180deg);
     transition:transform .4s ease-out;
 }
