@@ -92,7 +92,8 @@ video {
   padding: 0 1px;
 }
 
-.content a {
+.content a, .content label {
+  cursor: pointer;
   margin: 0 10%;
   font-size: 20px;
   font-weight: 900;
@@ -104,7 +105,7 @@ video {
   transition: 0.3s ease-in-out;
 }
 
-.glass-bg a:hover {
+.glass-bg a:hover, .content label:hover {
   border: 2px solid #000;
   color: #fff;
   background: #000;
@@ -147,15 +148,15 @@ video {
     left: -1rem;
   }
   to{
-    left: -10rem;
+    left: -100rem;
   }
 }
 .popup{
   background: linear-gradient(
-    135deg, rgba(14,0,36,1) 5%,
-            rgba(97,9,121,1) 50%,
-            rgba(62,60,173,1) 80%,
-            rgba(0,212,255,1) 100%);
+    135deg, rgba(14,0,36,0.5) 5%,
+            rgba(97,9,121,0.5) 50%,
+            rgba(62,60,173,0.5) 80%,
+            rgba(0,212,255,0.5) 100%);
   color: #fff;  
   position: relative;
   text-align: center;
@@ -168,16 +169,16 @@ video {
   position: fixed;
   bottom: 1rem;
   left: 1rem;
-  animation: topUp .2s;
+  animation: topUp 0.1s;
   margin-bottom: 20px;
   transition: all 0.2s;
   font-size: 18px;
   font-weight: 500;
   border-radius: 10px;
 }
-#popup-container {
+/* #popup-container {
   
-}
+} */
 
 .bro {
   padding-top: 10px;
@@ -389,4 +390,31 @@ video {
     padding: 0 2px;
     font-size: 10px;
   }
+}
+.modal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 50;
+  transform: translate(0, -120vh);
+  transition: all 0.3s;
+  background-color: rgba(255,255,255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.modal a {
+  color: #000;
+  font-weight: 900;
+}
+
+.donate-checkbox{
+  display:none;
+}
+.donate-checkbox:checked ~ .modal{
+  transform: translate(0,0);
 }

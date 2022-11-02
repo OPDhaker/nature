@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,14 +11,18 @@
   <script src="js/script.js"></script>
   <title>Nature Hack</title>
 </head>
+
 <body>
   <video src="img/bg.mov" autoplay muted loop></video>
-  
+
   <section class="glass-bg">
     <div class="content">
       <h1>Nature Hack</h1>
-      <p>We save the nature by planting trees and make fertilizers for the farmers using the dead and decaying trees. Help us by donating, We plant 1 tree every 1$ you donate.</p>
+      <p>We save the nature by planting trees and make fertilizers for the farmers using the dead and decaying trees.
+        Help us by donating, We plant 1 tree every 1$ you donate.</p>
       <a href="#km">Know More!</a>
+      <br>
+      <a href="#as">About Us!</a>
     </div>
   </section>
   <section id="km"></section>
@@ -42,27 +47,79 @@
           <p class="statsUP">15,898,449</p>
         </div>
       </div>
+      <br>
+      <a href="#as">About Us!</a>
     </div>
   </section>
+  <section id="as"></section>
+  <section class="glass-bg">
+    <div class="content">
+      <h1>About Us</h1>
+      <p>We are Nahack. This is an organization working for the quality of air all over the
+        world. The organization based in Madhya Pradesh(headquarter), India took the
+        initiative seeing the horrendous situation of air pollution all over India. Since then we
+        started the work from Delhi and now we have presence internationally. We have tied
+        up with Team4Nature, WWF, Team Earth, Team Trees and Plant for the Planet. We
+        plant 1 tree for each dollar we receive as donation.</p>
+      <a href="#dono">Donate Us!</a>
+    </div>
+  </section>
+  <section id="dono"></section>
+  <input class="donate-checkbox" type="checkbox" id="donate">
+  <div class="modal">
+    <a href="index.html"><i class="fa-solid fa-x"></i></a>
+    <div class="modal-container">
+      <h2>Donate!</h2>
+      <p>We plant trees with every dollar you donate us.
+        Every donation, regardless of the amount, is appreciated </p>
+      <form class="modal-form">
+        
+        <div class="modal-form-input">
+          <label class="modal-form-input-label" for="amount">Amount</label>
+          <input type="number" class="modal-form-input" max="9999" min="1" id="amount"/>
+        </div>
+        <div class="modal-form-input">
+          <label class="modal-form-input-label" for="card-name">Card Holder Name</label>
+          <input type="text" class="modal-form-input" id="card-name"/>
+        </div>
+        <div class="modal-form-input">
+          <label class="modal-form-input-label" for="card-number">Card Number</label>
+          <input type="text" maxlength="19" class="modal-form-input" id="card-number"/>
+        </div>
+        
+        <div class="modal-form-input">
+          <label class="modal-form-input-label" for="card-cvv" >CVV</label>
+          <input type="password" maxlength="3" class="modal-form-input" id="card-cvv"/>
+        </div>
+      </form>
+
+    </div>
+  </div>
   <section class="glass-bg">
     <div class="content">
       <h1>Donate Us</h1>
       <p>We plant trees every dollar you donate us.</p>
-      <a href="dono.html">Donate!</a>
+      <label for="donate">Donate!</label>
+
       <br>
       <a href="air.html">Air</a>
     </div>
   </section>
   <section id="popup-container">
   </section>
+
   <script>
     const stats = document.querySelectorAll('.statsUP');
     setInterval(() => {
-          stats[0].innerHTML = Number(stats[0].innerHTML.split('.')[0].split('').filter(a=>a!==',').join('')) + Math.floor((Math.random()*20)*100)/100;
-          stats[1].innerHTML = Math.floor(Number(stats[0].innerHTML));
-          
-      }, 4000)
+      stats[0].innerHTML = Number(stats[0].innerHTML.split('.')[0].split('').filter(a => a !== ',').join('')) + Math.floor((Math.random() * 20) * 100) / 100;
+      stats[1].innerHTML = Math.floor(Number(stats[0].innerHTML));
+
+    }, 4000)
   </script>
+
   <script src="js/popup.js"></script>
+  
+  <script src="js/donate.js"></script>
 </body>
+
 </html>
