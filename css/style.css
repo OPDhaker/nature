@@ -131,8 +131,26 @@ video {
   grid-template-rows: 2fr 2fr;
   grid-template-columns: 2fr 2fr;
 }
-
-#popup-container {
+.popup p{
+  margin: 0;
+}
+@keyframes topUp{
+  from{
+    bottom: -4rem;
+  }
+  to{
+    bottom: 1rem;
+  }
+}
+@keyframes leftOut{
+  from{
+    left: -1rem;
+  }
+  to{
+    left: -10rem;
+  }
+}
+.popup{
   background: linear-gradient(
     135deg, rgba(14,0,36,1) 5%,
             rgba(97,9,121,1) 50%,
@@ -141,14 +159,24 @@ video {
   color: #fff;  
   position: relative;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 50px;
   width: max-content;
   padding: 0 10px;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  animation: topUp .2s;
   margin-bottom: 20px;
   transition: all 0.2s;
   font-size: 18px;
   font-weight: 500;
   border-radius: 10px;
+}
+#popup-container {
+  
 }
 
 .bro {
