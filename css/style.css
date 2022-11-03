@@ -214,6 +214,29 @@ video {
   }
 }
 
+@media screen and (max-width: 702px) {
+ .about p {
+  font-size: 20px;
+ }
+}
+
+@media screen and (max-width: 490px) {
+  .about p {
+   margin: 0;
+   padding: 0;
+  }
+ }
+
+ @media screen and (max-width: 450px) {
+  .about h1 {
+    font-size: 20px;
+  }
+  
+  .about p {
+    font-size: 15px;
+  }
+ }
+
 @media screen and (max-width: 620px) {
   .so {
     padding: 5px 20px;
@@ -223,6 +246,10 @@ video {
 @media screen and (max-width: 520px) {
   .so {
     padding: 2.5px 10px;
+  }
+  .glass-bg .header a {
+    /* font-size: ; */
+    padding: 5px 20px;
   }
 }
 
@@ -239,6 +266,25 @@ video {
 
   .main {
     grid-gap: 15px;
+  }
+
+  .donate h1 {
+    font-size: 25px;
+  }
+
+  .donate p {
+    font-size: 20px;
+  }
+  
+  .donate a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .glass-bg .header a {
+    /* font-size: ; */
+    padding: 2px 20px;
   }
 }
 
@@ -259,6 +305,11 @@ video {
 
   .main {
     grid-gap: 8px;
+  }
+
+  .glass-bg .content a {
+    font-size: 15px;
+    margin: 0 5%;
   }
 }
 
@@ -293,6 +344,24 @@ video {
 
   #popup-container {
     padding: 0 2px;
+  }
+
+  .about p {
+    font-size: 10px;
+  }
+
+  .about h1 {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .header p {
+    font-size: 18px;
+  }
+
+  .header a {
+    font-size: 18px;
   }
 }
 
