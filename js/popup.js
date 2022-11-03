@@ -10,7 +10,7 @@ const popup = (n, money) => {
 // const name = names[Math.floor(Math.random() * names.length)]
 // console.log(`${name}`)
 const getMoney = () => {
-    return Math.floor(Math.random() * 500) / 10
+    return Math.floor(Math.random() * 50)
 }
 
 const removePopup = () => {
