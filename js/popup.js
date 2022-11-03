@@ -2,7 +2,7 @@
 const popup = (n, money) => {
     return `
     <div class="popup">
-        <p>${n} just donated $${money}!</p>
+        <p>${n} just donated ₹${money}!</p>
     </div>
     `
 }
@@ -10,7 +10,7 @@ const popup = (n, money) => {
 // const name = names[Math.floor(Math.random() * names.length)]
 // console.log(`${name}`)
 const getMoney = () => {
-    return Math.floor(Math.random() * 50)
+    return Math.floor(Math.random() * 5000)
 }
 
 const removePopup = () => {
