@@ -152,7 +152,7 @@ next.addEventListener('click', (e) => {
             <h1>${n}, <span id="n"></span></h1>
             <br>
             <br>
-            <p id="change-me">Thank you for your donation! As promised, We will plant ${amount} trees for the $${amount} that you donated! </p>
+            <p id="change-me">Thank you for your donation! As promised, We will plant ${amount} trees for the ₹${amount} that you donated! </p>
            <br> <p>Your donation will save lives and our precious planet </p>
         </div>
     </form>`
@@ -166,7 +166,7 @@ document.querySelector('#name').addEventListener('input', (e) => {
     document.querySelector('#n').innerHTML = e.target.value;
     n = e.target.value;
     if (amount > 0 && n.length > 0) {
-        document.querySelector('#change-me').innerHTML = `Click on next to donate $${amount}`
+        document.querySelector('#change-me').innerHTML = `Click on next to donate ₹${amount}`
         next.style.display = "inline-block";
     }
 })
@@ -184,7 +184,7 @@ document.querySelector('#amount').addEventListener('input', (e) => {
     document.querySelector('#amount').value = amount.toString().trim();
 
     if (amount > 0 && n.length > 0) {
-        document.querySelector('#change-me').innerHTML = `Click on next to donate $${amount}`
+        document.querySelector('#change-me').innerHTML = `Click on next to donate ₹${amount}`
         next.style.display = "inline-block";
     }
 })
