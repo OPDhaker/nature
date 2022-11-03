@@ -205,7 +205,7 @@ document.querySelector('#amount').addEventListener('input', (e) => {
         document.querySelector('#amount').value = ''
         return;
     }
-    if (!Number(e.target.value) || Number(e.target.value) > 5000) {
+    if (!Number(e.target.value) || Number(e.target.value) > 200000) {
         document.querySelector('#amount').value = amount.toString().trim();
 
         document.querySelector('#change-me').innerHTML = ` PLEASE FILL OUT THIS FORM!`
