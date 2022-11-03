@@ -81,7 +81,9 @@ video {
   text-transform: uppercase;
   text-align: center;
 }
-
+/* .about{
+  
+} */
 .content p {
   margin-bottom: 5%;
   color: #000;
@@ -89,7 +91,7 @@ video {
   font-size: 25px;
   text-shadow: 0 0 100px rgba(0, 0, 0, 0.4);
   font-weight: 500;
-  padding: 0 1px;
+  padding: 0 1rem;
 }
 
 .content a, .content label {
