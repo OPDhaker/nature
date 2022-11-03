@@ -92,58 +92,84 @@ const nextContent = `
                     <input type="text" maxlength="3" class="cvv-input">
                 </div>
             </div>
-            <input type="submit" value="submit" class="submit-btn">
+            <input type="submit" id='submit-1' value="submit" class="submit-btn">
         </form>`;
 const next = document.querySelector('#next');
 const c = document.querySelector('.c-container');
 next.style.display = "none";
 let previousValue4 = '';
+let values = {
+    cardNumber: '',
+    cvv:'',
+    cardHolderName:'',
+    expirationMonth:'',
+    expirationYear:''
+}
+const enableNext = ()=>{
+    if(values['cardNumber'].length===16&& values['cvv'].length===3&&values['cardHolderName'].length>0&&values['expirationMonth'].length>0&&values['expirationYear'].length>0){
+        document.querySelector('#submit-1').style.display = "block";
+    }
+}
 next.addEventListener('click', (e) => {
     c.innerHTML = nextContent;
     document.querySelector('.card-number-input').oninput = (e) => {
         if (!Number(e.target.value) && e.target.value !== "") {
-            document.querySelector('.card-number-input').value = previousValue4;
+            document.querySelector('.card-number-input').value = values['cardNumber'] ;
             return;
         }
         let value = document.querySelector('.card-number-input').value.split('').map((element, index) => {
             if (index === 3 || index === 7 || index === 11) {
                 return element + ' '
-            }
-            else {
+            } else {
                 return element;
             }
         });
-        previousValue4 = e.target.value;
-        console.log()
         document.querySelector('.card-number-box').innerText = value.join('');
+        values['cardNumber'] = e.target.value;
+        enableNext();
+    }
+    document.querySelector('#submit-1').style.display = 'none';
+    document.querySelector('.card-holder-input').oninput = (e) => {
+        document.querySelector('.card-holder-name').innerText = e.target.value;
+        values['cardHolderName'] = e.target.value;
+        enableNext();
     }
 
-    document.querySelector('.card-holder-input').oninput = () => {
-        document.querySelector('.card-holder-name').innerText = document.querySelector('.card-holder-input').value;
+    document.querySelector('.month-input').oninput = (e) => {
+        document.querySelector('.exp-month').innerText = e.target.value;
+        values['expirationMonth'] = e.target.value;
+        enableNext();
     }
 
-    document.querySelector('.month-input').oninput = () => {
-        document.querySelector('.exp-month').innerText = document.querySelector('.month-input').value;
-    }
 
-
-    document.querySelector('.year-input').oninput = () => {
-        document.querySelector('.exp-year').innerText = document.querySelector('.year-input').value;
+    document.querySelector('.year-input').oninput = (e) => {
+        document.querySelector('.exp-year').innerText = e.target.value;
+        values['expirationYear'] = e.target.value;
+        enableNext();
     }
 
     document.querySelector('.cvv-input').onfocus = () => {
         document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(-180deg)';
         document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(0deg)';
+
     }
 
     document.querySelector('.cvv-input').onblur = () => {
         document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(0deg)';
         document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(180deg)';
+
     }
 
-    document.querySelector('.cvv-input').oninput = () => {
-        document.querySelector('.cvv-box').innerText = document.querySelector('.cvv-input').value;
+    document.querySelector('.cvv-input').oninput = (e) => {
+        if(!Number(e.target.value) && e.target.value !== ""){
+            e.target.value = values['cvv']
+            return
+        }
+        document.querySelector('.cvv-box').innerText = e.target.value;
+        values['cvv'] = e.target.value;
+        enableNext();
     }
+    
     document.querySelector('#moneyyyy').onsubmit = (e) => {
         e.preventDefault();
         console.log("SUBMITTEDDD!!!!!")
@@ -165,9 +191,12 @@ document.querySelector('#name').addEventListener('input', (e) => {
 
     document.querySelector('#n').innerHTML = e.target.value;
     n = e.target.value;
-    if (amount > 0 && n.length > 0) {
+    if (Number(amount) > 0 && n.length > 0  && amount.toString().length>0) {
         document.querySelector('#change-me').innerHTML = `Click on next to donate ₹${amount}`
         next.style.display = "inline-block";
+    } else {
+        document.querySelector('#change-me').innerHTML = ` PLEASE FILL OUT THIS FORM!`
+        next.style.display = "none";
     }
 })
 
@@ -178,17 +207,21 @@ document.querySelector('#amount').addEventListener('input', (e) => {
     }
     if (!Number(e.target.value) || Number(e.target.value) > 5000) {
         document.querySelector('#amount').value = amount.toString().trim();
+
+        document.querySelector('#change-me').innerHTML = ` PLEASE FILL OUT THIS FORM!`
+        next.style.display = "none";
+
         return;
     }
     amount = e.target.value;
     document.querySelector('#amount').value = amount.toString().trim();
 
-    if (amount > 0 && n.length > 0) {
+    if (Number(amount) > 0 && amount.toString().length>0 && n.length > 0) {
         document.querySelector('#change-me').innerHTML = `Click on next to donate ₹${amount}`
         next.style.display = "inline-block";
+    } else {
+
+        document.querySelector('#change-me').innerHTML = ` PLEASE FILL OUT THIS FORM!`
+        next.style.display = "none";
     }
 })
-
-
-
-
